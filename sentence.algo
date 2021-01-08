@@ -19,7 +19,7 @@ BEGIN
          ok:=true ;
          nbVoyelles:=nbVoyelles+1;
        END_IF
-       j=j+1;
+       j:=j+1;
   END_WHILE
 
   IF (ch[i]=" ") THEN
