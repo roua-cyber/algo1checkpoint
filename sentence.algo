@@ -15,15 +15,15 @@ BEGIN
  FOR i FROM 0 TO phrase.len-1  DO
   j:=0 ;
   WHILE (ok=false) and (j<voyelles.len) DO
-       IF (ch[i] == voyelle[j]) THEN
+       IF (ch[i] = voyelle[j]) THEN
          ok=true ;
-         nbVoyelles=nbVoyelles+1;
+         nbVoyelles:=nbVoyelles+1;
        END_IF
        j=j+1;
   END_WHILE
 
-  IF (ch[i]==" ") THEN
-       nbespaces=nbespaces+1; 
+  IF (ch[i]=" ") THEN
+       nbespaces:=nbespaces+1; 
   END_IF
 
  END_FOR
