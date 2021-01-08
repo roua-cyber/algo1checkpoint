@@ -1,0 +1,33 @@
+
+ALGORITHM sentence_manip
+VAR
+ voyelles : string := " aeiouyàâèéêëîïôùûœ" ;
+ j : int ;
+ i : int ;
+ ok=BOOLEAN ;
+ nbVoyelles : int :=0 ;
+ nbespaces : int :=0 ;
+ 
+BEGIN
+ write("give a sentence");
+ read(ch);
+
+ FOR i FROM 0 TO phrase.len-1  DO
+  j:=0 ;
+  WHILE (ok=false) and (j<voyelles.len) DO
+       IF (ch[i] == voyelle[j]) THEN
+         ok=true ;
+         nbVoyelles=nbVoyelles+1;
+       END_IF
+       j=j+1;
+  END_WHILE
+
+  IF (ch[i]==" ") THEN
+       nbespaces=nbespaces+1; 
+  END_IF
+
+ END_FOR
+  write("The length of the sentence is" , phrase.len+1) ;
+  write("The number of words in the sentence is" , nbespaces+1) ;
+  write("The number of vowels in the sentence is" , nbVoyelles) ;
+END
